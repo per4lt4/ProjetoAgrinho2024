@@ -700,9 +700,7 @@ input {
 
 @media screen and (min-width:480px) {
 
- #login-nav{
-    display: none;
-  }
+
 
     main {
         display: flex;
@@ -781,6 +779,10 @@ input {
 
 @media screen and (min-width:768px) {
 
+ #login-nav{
+    display: none;
+  }
+    
     .informacoes {
         padding-top: 20px;
         display: grid;
