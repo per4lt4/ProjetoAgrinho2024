@@ -779,9 +779,7 @@ input {
 
 @media screen and (min-width:768px) {
 
-#login-nav{
-display:none;
-}
+
     
     .informacoes {
         padding-top: 20px;
