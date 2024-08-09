@@ -779,7 +779,7 @@ input {
 
 @media screen and (min-width:768px) {
 
- #login-nav{
+li .login-nav{
     display: none;
   }
     
