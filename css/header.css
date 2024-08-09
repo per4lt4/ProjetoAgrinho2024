@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'lora';
+    src: url('fonts/Lora-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'narrow';
+    src: url('fonts/ArchivoNarrow-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'mulish';
+    src: url('fonts/Mulish-VariableFont_wght.ttf');
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    font-family: 'mulish';
+    text-decoration: none;
+  }
+  
+  .header {
+    background: #2e8a70  ;
+    padding-inline: 0px;
+    box-shadow: 0 5px 10px #21502f;
+    border-radius: 0 0 10px 10px ;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.perfil{
+    margin-right: 15px;
+}
+ header nav .logo img{
+    width: 148px;
+}
+  .logo2 a img{
+    display: none;
+ }
+
+  .nav-list {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+  }
+  
+  .nav-list li{
+   
+    margin: 5px;
+    list-style: none;
+   
+    transition: 0.5s;
+  }
+
+  .nav-list a {
+    font-size: 16px;
+    color: #fff;
+    padding-block: 20px;
+    border-radius: 50px;
+    transition: .5s;
+    
+  }
+  
+  .nav-list a:hover {
+    padding: 5px 5px;
+    background:linear-gradient(90deg,#a6d785,#f3c77e)    ;
+    border-radius: 8px;
+    color: #011a1f;
+    font-weight: 700;
+  }
+  
+
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+   
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+
+    header .nav{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav .logo img{
+        width: 110px;
+    }
+    .logo2 a img{
+       display: none;
+    }
+
+    .perfil a img{
+        width: 46px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       right: 3vw;
+        padding: 0;
+        top: 1vh;
+        
+    }
+
+    .hamburger {
+        position: absolute;
+      display: block;
+      z-index: 1;
+      justify-content: end;
+      right: 20vw;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #011a1f      ;
+      clip-path: circle(100px at 99% -25%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    
+    /* Estilos ativos */
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 2;
+
+    }
+
+    .nav.active .nav-list  {
+      z-index: 100;
+    
+    }
+
+    .nav.active .perfil {
+        display: none;
+      }
+    
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: #011a1f;
+      z-index: 101;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+      border: radius 8px; ;
+    }
+  }
+
+  @media (max-width: 480px){
+
+    .header{
+        box-shadow: 0 0 0 0 ;
+    }
+
+    header nav .logo img{
+        margin-right: 0;
+        width: 90px;
+    }
+
+    header nav .logo{
+        display: flex;
+        position: absolute;
+        left: 0px;
+        margin: 0;
+        
+    }
+
+    .perfil a img{
+        display: none;
+        
+    }
+  }
+
+  .logo a img{
+    width: 95px;
+  }

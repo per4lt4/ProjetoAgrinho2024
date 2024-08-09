@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'lora';
+    src: url('fonts/Lora-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'narrow';
+    src: url('fonts/ArchivoNarrow-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'mulish';
+    src: url('fonts/Mulish-VariableFont_wght.ttf');
+
+}
+
+@font-face {
+    font-family: 'popins';
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    max-width: 800px;
+    max-height: 700px;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 10px solid rgb(3, 84, 38);
+    border-radius: 10px;
+}
+
+.homem {
+    z-index: 10;
+    position: relative;
+    left: -15px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+
+}
+
+.login .titulo {
+    font-family: popins;
+    font-size: 50px;
+    font-weight: 800;
+    
+}
+
+.login .subtit p {
+    font-size: 20px;
+    font-family: mulish;
+    margin-bottom: 20px;
+}
+
+.entrada form fieldset {
+    border: none;
+    font-family: narrow;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.entrada form fieldset input {
+    padding: 6px;
+    border-radius: 25px;
+    background-color: black;
+    color: #fff;
+    font-family: popins;
+    border: 3px solid rgb(154, 252, 154);
+}
+
+.entrar button {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #8ccf6c;
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+.entrar button:hover{
+    background-color: #004e12;
+    transition: .3s ease-in-out;
+}
+
+.entrar button a {
+    font-family: popins;
+    font-size: 16px;
+    font-weight: 900;
+    color: #0b1984;
+    text-decoration: none;
+}
+
+.entrar button a:hover{
+    color: #ffffff;
+}
+
+
+
+.alternativo .opcoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+.alternativo .opcoes p{
+    font-family: narrow;
+}
+
+.icones{
+    display: flex;
+    gap: 20px;
+}
+
+.icones p .bi{
+    font-size: 25px;
+    color: #004e12;
+    height: auto;
+    transition: .3s ease;
+}
+
+.icones p .bi:hover{
+    color: #000000;
+    transition: .3s ease;
+}
+
+.alternativo .opcoes p a{
+    transition: .5s ease-in-out;  
+}
+
+.alternativo .opcoes p a:hover{
+color: #0b1984;
+font-weight: 900;
+transition: .5s ease-in-out;
+}
+
+main #voltar {
+    position: fixed;
+    left: 15%;
+    top: 2%;
+}
+
+main #voltar a {
+    font-size: 50px;
+    background: none;
+    color: #8ccf6c;
+
+}
+
+@media screen and (max-width:480px) {
+    main{
+        width: 90%;
+    }
+
+    .homem{
+        display: none;
+    }
+
+}

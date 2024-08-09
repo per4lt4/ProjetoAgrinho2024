@@ -1,0 +1,433 @@
+@font-face {
+    font-family: 'lora';
+    src: url('fonts/Lora-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'narrow';
+    src: url('fonts/ArchivoNarrow-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'mulish';
+    src: url('fonts/Mulish-VariableFont_wght.ttf');
+
+}
+
+@font-face {
+    font-family: 'popins';
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:300px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 700px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(210, 210, 210);
+        width: 100%;
+        max-width: 80%;
+        gap: 50px;
+        height: 500px;
+        position: relative;
+        top: 100px;
+        border-radius: 25px;
+
+    }
+
+    main button {
+        position: fixed;
+        left: 15%;
+        top: 2%;
+    }
+
+    main button a {
+        font-size: 30px;
+        background: none;
+        color: #8ccf6c;
+
+    }
+
+    .contato-ref {
+        position: relative;
+        top: 10px;
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #8ccf6c;
+        height: 400px;
+        border-radius: 8px;
+    }
+
+    .cont-conta {
+        width: 250px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        height: 300px;
+    }
+
+    .cont-conta .titulo p {
+        font-family: popins;
+        font-size: 20px;
+        font-weight: 800;
+        padding-left: 5px
+    }
+
+    .contatos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 10px;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .contatos .itm-contato {
+        border-radius: 5px;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .contatos .itm-contato a {
+
+        font-family: narrow;
+        display: flex;
+        gap: 20px;
+        font-size: 23px;
+        text-decoration: none;
+        color: #003a40;
+        font-weight: 900;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        transition: .3s ease-in-out;
+    }
+
+    .contatos .itm-contato a:hover {
+        background-color: #003a40;
+        color: aliceblue;
+        letter-spacing: 2px;
+        transition: .3s ease-in-out;
+    }
+
+
+    .contatos .itm-contato a i {
+        font-size: 40px;
+        font-family: popins;
+    }
+
+    .escreva {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+
+
+    }
+
+    .escreva .cont-write {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #003a40;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    .escreva .cont-write .titulo {
+        font-family: mulish;
+        display: block;
+        width: 90%;
+    }
+
+    .escreva .cont-write .conteudo-entrada {
+        width: 90%;
+        font-family: popins;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo-entrada form input {
+        border-radius: 10px;
+        background-color: rgb(198, 210, 220);
+        width: 100%;
+    }
+
+    .conteudo-entrada form textarea {
+        border-radius: 10px;
+        background-color: rgb(198, 210, 220);
+    }
+
+    .botau {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        margin: 20px;
+        padding: 5px;
+    }
+
+    .botau #Enviar {
+        background-color: #8ccf6c;
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+        font-family: popins;
+        font-weight: 700;
+        transition: .3s ease-in-out;
+    }
+
+    .botau #Enviar:hover {
+        width: 110px;
+        height: 35px;
+        background-color: #003a40;
+        color: #8ccf6c;
+        transition: .3s ease-in-out;
+        border: 3px solid #8ccf6c;
+        letter-spacing: 2px;
+    }
+
+}
+
+@media screen and (min-width:480px) {
+    main {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: start;
+    }
+
+
+    .contato-ref {
+        position: relative;
+        display: flex;
+        left: 1;
+        width: 400px;
+    }
+
+    .contatos {
+        width: auto;
+        height: auto;
+    }
+
+    .cont-conta {
+        width: 100%;
+    }
+
+    .escreva {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+
+
+    .cont-write {
+        margin-left: 0;
+        width: 390px;
+    }
+
+
+}
+
+
+@media screen and (min-width:768px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .contato-ref {
+        width: 100%;
+    }
+
+    .contatos {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .contatos .itm-contato a {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    .contatos .itm-contato p a {
+        font-size: 18px;
+
+    }
+
+
+    .escreva {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 00px;
+
+    }
+
+
+
+}
+
+@media screen and (min-width:1200px) {
+
+    main button a {
+        font-size: 50px;
+
+    }
+
+    main button a:hover {
+        color: #003a40;
+        transition: .5s ease-in-out;
+    }
+
+    main button:hover {
+        transform: translateX(-10px);
+        transition: .3s ease-in-out;
+
+    }
+
+    main {
+
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        max-width: 900px;
+    }
+
+    .contato-ref {
+        width: 100%;
+        height: 100%;
+        background: none;
+    }
+
+    .cont-conta {
+        background-color: #8ccf6c;
+        padding: 10px;
+        border-radius: 10px;
+        width: 350px;
+        height: 400px;
+        gap: 30px;
+        margin-left: 50px;
+    }
+
+    .escreva {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cont-write {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        height: 80%;
+    }
+
+    .cont-write .titulo {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .contatos .itm-contato p a {
+        font-size: 25px;
+    }
+
+    .cont-write .titulo h1 {
+        font-size: 50px;
+    }
+
+    .cont-write .titulo h4 {
+        font-size: 20px;
+    }
+
+    .conteudo-entrada form {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        align-items: start;
+    }
+
+    .conteudo-entrada form #nome {
+        height: 40px;
+
+    }
+
+    .conteudo-entrada form #email {
+        height: 40px;
+        width: 80%;
+    }
+
+    .conteudo-entrada form #mensagem {
+        width: 90%;
+        height: 80px;
+
+    }
+
+    .botau {
+        width: 90%;
+    }
+
+
+    .botau #Enviar{
+        font-size: 28px;
+        width: 150px;
+        height: 40px;
+    }
+
+    .botau #Enviar:hover{
+       font-size: 20px;
+    }
+
+}
