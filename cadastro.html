@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Define a codificação de caracteres para UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Configura a visualização para dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título da página que aparece na aba do navegador -->
+  <title>Document</title>
+  <!-- Link para o arquivo CSS específico para a página de cadastro -->
+  <link rel="stylesheet" href="css/cadastro.css">
+  <!-- Script JavaScript para funcionalidades específicas da página de cadastro -->
+  <script defer src="js/cadastro.js"></script>
+  <!-- Importa ícones do Bootstrap para uso na página -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <!-- Conteúdo principal da página -->
+  <main class="container">
+    <!-- Botão para voltar à página de login -->
+    <button id="voltar">
+      <i class="bi bi-arrow-left-short"></i><a href="login.html">voltar</a>
+    </button>
+
+    <!-- Cabeçalho da página -->
+    <header>Cadastre-se como:</header>
+    
+    <!-- Botões para selecionar o tipo de cadastro -->
+    <div class="selection-buttons">
+        <button id="fornecedor">Fornecedor</button>
+        <button id="comerciante">Comerciante</button>
+    </div>
+
+    <!-- Formulário para Fornecedor -->
+    <div id="fornecedor-form" class="form-outer">
+        <div class="form-outer-content">
+            <form action="#">
+                <!-- Página 1: Informações básicas -->
+                <div class="page slide-page">
+                    <div class="title">Informação básica:</div>
+                    <div class="field">
+                        <div class="label">Nome do fornecedor</div>
+                        <input type="text" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">CNPJ</div>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <!-- Página 2: Informações de contato -->
+                <div class="page">
+                    <div class="title">Informações de contato:</div>
+                    <div class="field">
+                        <div class="label">Endereço de e-mail</div>
+                        <input type="email" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">Número de telefone</div>
+                        <input type="tel" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">Localização</div>
+                        <div class="location-field">
+                            <input type="text" id="location-input-fornecedor" placeholder="Digite sua localização" required>
+                            <button type="button" id="get-location-btn-fornecedor">
+                                <i class="bi bi-geo-alt"></i> Localizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Página 3: Período de produção -->
+                <div class="page">
+                    <div class="title">Período de produção</div>
+                    <div class="field">
+                        <select required>
+                            <option value="bimestral">Bimestral</option>
+                            <option value="trimestral">Trimestral</option>
+                            <option value="anual">Anual</option>
+                            <option value="mensal">Mensal</option>
+                            <option value="indefinido">Indefinido</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Campo adicional para Categoria -->
+                <div class="field">
+                    <div class="label">Categoria</div>
+                    <select required>
+                        <option value="agricultura-familiar">Agricultura Familiar</option>
+                        <option value="fazenda">Fazenda</option>
+                        <option value="produtor-secundario">Produtor Secundário</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Página 4: Finalização -->
+                <div class="page">
+                    <div class="title">Finalize</div>
+                    <div class="field btns">
+                        <!-- Botão de envio do formulário -->
+                        <button class="submit"><a href="index.html">Enviar</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulário para Comerciante -->
+    <div id="comerciante-form" class="form-outer">
+        <div class="form-outer-content">
+            <form action="#">
+                <!-- Página 1: Informações básicas -->
+                <div class="page slide-page">
+                    <div class="title">Informações básicas:</div>
+                    <div class="field">
+                        <div class="label">Nome do seu ponto comercial:</div>
+                        <input type="text" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">Nome do proprietário</div>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <!-- Página 2: Informações de contato -->
+                <div class="page">
+                    <div class="title">Informações de contato:</div>
+                    <div class="field">
+                        <div class="label">Endereço de e-mail</div>
+                        <input type="email" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">Número de telefone</div>
+                        <input type="tel" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">Localização</div>
+                        <div class="location-field">
+                            <input type="text" id="location-input-comerciante" placeholder="Digite sua localização" required>
+                            <button type="button" id="get-location-btn-comerciante">
+                                <i class="bi bi-geo-alt"></i> Localizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Página 3: Sobre a empresa -->
+                <div class="page">
+                    <div class="title">Sobre a empresa</div>
+                    <div class="field">
+                        <div class="label">CNPJ</div>
+                        <input type="text" required>
+                    </div>
+                    <div class="field">
+                        <div class="label">Categoria</div>
+                        <select required>
+                            <option value="mercado">Mercado</option>
+                            <option value="supermercado">Supermercado</option>
+                            <option value="armazem">Armazém</option>
+                            <option value="distribuidora">Distribuidora</option>
+                            <option value="restaurante">Restaurante</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="lanchonete">Lanchonete</option>
+                            <option value="delivery">Delivery</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Página 4: Detalhes finais -->
+                <div class="page">
+                    <div class="title">Detalhes finais:</div>
+                    <div class="field btns">
+                        <!-- Botão de envio do formulário -->
+                        <button class="submit"><a href="index.html">Enviar</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

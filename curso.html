@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>curso de desenvolvimento</title>
+    <!-- Link para o arquivo CSS específico para a página do curso -->
+    <link rel="stylesheet" href="css/curso.css">
+    <!-- Importa o arquivo JavaScript para o cabeçalho -->
+    <script defer src="js/head.js"></script>
+    <!-- Importa o Bootstrap Icons para ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Logo do site -->
+            <div class="logo">
+                <a href="#"><img src="imagensAgrinho/logo-c-nome.png" alt="imagem de logo" width="128"></a>
+            </div>
+
+            <!-- Botão do menu hambúrguer (para dispositivos móveis) -->
+            <button class="hamburger"></button>
+            
+            <!-- Lista de navegação principal -->
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estante-de-produtos.html">Produtos</a></li>
+                <li><a href="#">Aprendizado</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="contact-us.html">Fale conosco</a></li>
+                <span></span>
+            </ul>
+            
+            <!-- Ícone de perfil -->
+            <div class="perfil">
+                <a href="login.html"><img src="imagensAgrinho/imagens pra icone/perfil_icone.png" alt="icone do perfil" width="56"></a> <!-- Ícone de perfil -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Botão para voltar à página inicial -->
+        <button class="voltar">
+            <a href="index.html"><i class="bi bi-arrow-left-circle-fill"></i></a>
+        </button>
+
+        <!-- Seção do curso -->
+        <section class="curso">
+            <!-- Área para o vídeo do curso -->
+            <div class="videoaula">
+                <iframe width="100%" height="300px"
+                    src="https://www.youtube.com/embed/videoseries?si=bYD1KUZUZbk1JStq&amp;list=PLHz_AreHm4dmmqFmLT17KMjoaE0Y4LqRv"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Descrição do curso -->
+            <div class="descric-curso">
+                <div class="texto">
+                    <h1>
+                        introdução ao marketing
+                    </h1>
+                    <p id="descri-aula">
+                        para você agricultor que anuncia aqui na Fresh Farm Market, ou até mesmo você comerciante que compra dos nossos produtos, 
+                        este é um curso que lhe mostrará como alcançar números que você até hoje somente imaginou ter alcançado, mais agora através desse curso, isso pode ser realizado.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Progresso do curso -->
+            <div class="progresso">
+                <h2>progresso do curso</h2>
+                <div class="barra-prog">
+                    <div class="wrapper">
+                        <div class="skills-wrapper">
+                            <!-- Barra de progresso para vídeo-aulas -->
+                            <div class="bar">
+                                <div class="info">
+                                    <span>video-aulas</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+
+                            <!-- Barra de progresso para questões -->
+                            <div class="bar">
+                                <div class="info">
+                                    <span>questoes</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão para ver aulas anteriores -->
+                <div class="btn-aulas-anteriores">
+                    <a href="#">ver aulas anteriores</a>
+                </div>
+            </div>
+
+            <!-- Próximos conteúdos do curso -->
+            <div class="next-aulas">
+                <h2>próximos conteudos</h2>
+
+                <!-- Lista de itens de aula -->
+                <div class="item-aula">
+                    <div class="icone">
+                        <p><i class="bi bi-caret-right-square"></i></p>
+                    </div>
+                    <p id="titulo-next-aula"> aula de introdução</p>
+                    <span>12 min</span>
+                </div>
+
+                <div class="item-aula">
+                    <div class="icone">
+                        <p><i class="bi bi-caret-right-square"></i></p>
+                    </div>
+                    <p id="titulo-next-aula">conceitos</p>
+                    <span>14 min</span>
+                </div>
+
+                <div class="item-aula">
+                    <div class="icone">
+                        <p><i class="bi bi-caret-right-square"></i></p>
+                    </div>
+                    <p id="titulo-next-aula">ferramentas de apoio</p>
+                    <span>12 min</span>
+                </div>
+
+                <div class="item-aula">
+                    <div class="icone">
+                        <p><i class="bi bi-caret-right-square"></i></p>
+                    </div>
+                    <p id="titulo-next-aula">introdução ao copywriting</p>
+                    <span>12 min</span>
+                </div>
+
+                <div class="item-aula">
+                    <div class="icone">
+                        <p><i class="bi bi-caret-right-square"></i></p>
+                    </div>
+                    <p id="titulo-next-aula"> aula de introdução</p>
+                    <span>12 min</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <!-- Logo e direitos autorais -->
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="imagensAgrinho/logo-c-nome.png" alt="fesh farm market" width="204px">
+                    </div>
+                    <p id="copy">Fresh Farm Market ©- Todos os direitos Reservados - 2024</p>
+                </div>
+                <!-- Links de ajuda -->
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#"><span>Home</span></a></li>
+                        <li><a href="#"><span>Produtos</span></a></li>
+                        <li><a href="#"><span>Aprendizado</span></a></li>
+                        <li><a href="#"><span>Sobre Nós</span></a></li>
+                        <li><a href="#"><span>serviços</span></a></li>
+                    </ul>
+                </div>
+                <!-- Informações de contato -->
+                <div class="footer-col">
+                    <h4>contate-nos</h4>
+                    <ul>
+                        <li><a href="#"><span>chat-bot</span></a></li>
+                        <li><a href="#"><span>fresfarm@gmail.com </span></a></li>
+                        <li><a href="#"><span>(42) 3422-4509</span></a></li>
+                        <li><a href="#"><span>+55 42 9999-9999</span></a></li>
+                    </ul>
+                </div>
+                <!-- Links para redes sociais -->
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

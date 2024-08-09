@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estante de produtos</title>
+    <script defer src="js/head.js"></script>
+    <link rel="stylesheet" href="css/estante-de-produtos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="#"><img src="imagensAgrinho/logo-c-nome.png" alt="logo do site" width="128"></a>
+            </div>
+
+            <button class="hamburger"></button>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="curso.html">Aprendizado</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="contact-us.html">Fale conosco</a></li>
+                <span></span>
+            </ul>
+            <div class="perfil">
+                <a href="perfil.html"><img src="imagensAgrinho/imagens pra icone/perfil_icone.png" alt="imagem do icone de perfil" width="56px"></a>
+            </div>
+        </nav>
+    </header>
+
+    <header class="dois">
+        <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+        </select>
+
+
+
+
+        <div class="opcoes-do-hdoi">
+            <div id="search-container">
+
+
+                <div id="search-bar" class="hidden">
+                    <input type="text" placeholder="Pesquisar..." id="search-input">
+                    <button id="search-submit">Buscar</button>
+                </div>
+                <button id="search-icon" aria-label="Pesquisar">
+                    <i class="bi bi-search"></i>
+                </button>
+                <a href="perfil.html" id="perfil"><i class="bi bi-person-fill"></i></a>
+                <a href="#" id="fav"><i class="bi bi-heart-fill"></i></a>
+                <a href="#" id="carrinho"><i class="bi bi-cart-fill"></i></a>
+
+            </div>
+
+
+
+    </header>
+
+    <main class="estante">
+        <div class="titulo">
+            <h1 id="titulo-est-prod">o seu produto ideal está aqui</h1>
+        </div>
+
+        <div class="categorias">
+            <a href="">
+                <div class="item">
+                    <img src="imagensAgrinho/imagens-produtos/morangos.jpg" width="130px" alt="imagem do produto">
+                    <p>frutas</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="item">
+                    <img src="imagensAgrinho/imagens-produtos/carne.jpg" width="130px" alt="imagem do produto">
+                    <p>carnes</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="item">
+                    <img src="imagensAgrinho/imagens-produtos/alface.png" width="130px" alt="imagem do produto">
+                    <p>legumes</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="item">
+                    <img src="imagensAgrinho/imagens-produtos/alho.png" width="130px" alt="imagem do produto">
+                    <p>temperos</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="item">
+                    <img src="imagensAgrinho/imagens-produtos/conservas.png" width="130px" height="90px" alt="imagem do produto">
+                    <p>produzidos</p>
+                </div>
+            </a>
+
+
+
+        </div>
+
+        <!-- Swiper JS -->
+        
+
+        <button class="btn-filtrar" onclick="toggleFiltro()">Filtrar <i class="bi bi-funnel-fill"></i></button>
+
+        <!-- Aba de filtragem -->
+        <div id="filtro" class="filtro">
+            <button class="btn-fechar" onclick="toggleFiltro()">×</button>
+            <h2>Filtros</h2>
+            
+        <!-- Opções de Checkbox -->
+        <label>
+            <input type="checkbox"> Entrega   
+        </label>
+        <label>
+            <input type="checkbox"> Frete grátis
+        </label>
+
+        <!-- Filtros de Preço -->
+        <div class="filtro-preco">
+            <h3>Preço</h3>
+            <label for="preco-min">Mínimo:</label>
+            <input type="number" id="preco-min" name="preco-min" min="0" placeholder="R$ 0">
+            <label for="preco-max">Máximo:</label>
+            <input type="number" id="preco-max" name="preco-max" min="0" placeholder="R$ 1000">
+        </div>
+
+        <!-- Filtros de Classificação -->
+        <div class="filtro-classificacao">
+            <h3>Classificação</h3>
+            <label>
+                <input type="radio" name="classificacao" value="5"> 5 Estrelas
+            </label>
+            <label>
+                <input type="radio" name="classificacao" value="4"> 4 Estrelas
+            </label>
+            <label>
+                <input type="radio" name="classificacao" value="3"> 3 Estrelas
+            </label>
+            <label>
+                <input type="radio" name="classificacao" value="2"> 2 Estrelas
+            </label>
+            <label>
+                <input type="radio" name="classificacao" value="1"> 1 Estrela
+            </label>
+        </div>
+
+        <!-- Filtros de Quantidade -->
+        <div class="filtro-quantidade">
+            <h3>Quantidade</h3>
+            <label for="quantidade-min">Mínimo:</label>
+            <input type="number" id="quantidade-min" name="quantidade-min" min="1" placeholder="1">
+            <label for="quantidade-max">Máximo:</label>
+            <input type="number" id="quantidade-max" name="quantidade-max" min="1" placeholder="100">
+        </div>
+
+
+        
+        <!-- Filtros de Localização -->
+        <div class="filtro-localizacao">
+            <h3>Localização</h3>
+            <label for="localizacao">Endereço:</label>
+            <input type="text" id="localizacao" name="localizacao" placeholder="Nome da cidade">
+            <button type="button" onclick="openGoogleMaps()">Buscar no Google Maps</button>
+        </div>
+            <button class="btn-aplicar" onclick="toggleFiltro()">aplicar</button>
+        </div>
+        
+        <script>
+            function toggleFiltro() {
+                // Implementar a lógica para mostrar ou esconder o filtro
+                const filtro = document.getElementById('filtro');
+                filtro.style.display = (filtro.style.display === 'none' || filtro.style.display === '') ? 'block' : 'none';
+            }
+    
+            function openGoogleMaps() {
+                const endereco = document.getElementById('localizacao').value;
+                const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`;
+                window.open(mapsUrl, '_blank');
+            }
+        </script>
+
+<!--aqui começa o setor de produtos-->
+
+
+        <section class="container-produtod">
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/amoras.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 59,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/cenoura.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> peso(gr)</h2>
+                    <h3 class="preco">R$ 34,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/mirtilo.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/blocolis.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> peso(gr)</h2>
+                    <h3 class="preco">R$ 49,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/cenoura.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 1,5(kg)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/morangos.jpg" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 1,5(kg)</h2>
+                    <h3 class="preco">R$ 78,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/pessego.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 9,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/amoras.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 2,00<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/banana.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 1,5(kg)</h2>
+                    <h3 class="preco">R$ 20,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/cebola.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 1,5(kg)</h2>
+                    <h3 class="preco">R$ 8,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/conservas.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 1,5(kg)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/pimentão.jpg" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/alho.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 1,5(kg)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/blocolis.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="produto.html">
+                    <img src="imagensAgrinho/imagens-produtos/alface.png" alt="imagem do produto">
+                    <span></span>
+                    <h2>produto <br> 500(gr)</h2>
+                    <h3 class="preco">R$ 99,99<span>/kg</span></h3>
+                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <span class="discon">-50%</span>
+                </a>
+            </div>
+
+
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-logo">
+                    <div class="logo"><img src="imagensAgrinho/logo-c-nome.png" alt="fesh farm market" width="204px">
+                    </div>
+                    <p id="copy">Fresh Farm Market ©- Todos os direitos Reservados - 2024</p>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="estante-de-produtos.html"><span>Produtos</span></a></li>
+                        <li><a href="curso.html"><span>Aprendizado</span></a></li>
+                        <li><a href="sobre-nos.html"><span>Sobre Nós</span></a></li>
+                        <li><a href="sobre-nos.html"><span>serviços</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contate-nos</h4>
+                    <ul>
+                        <li><a href="contact-us.html"><span>chat-bot</span></a></li>
+                        <li><a href="contact-us.html"><span>fresfarm@gmail.com </span></a></li>
+                        <li><a href="contact-us.html"><span>(42) 3422-4509</span></a></li>
+                        <li><a href="contact-us.html"><span>+55 42 9999-9999</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/script-estante.js"></script>
+</body>
+
+</html>

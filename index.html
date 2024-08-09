@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Fresh</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link para o arquivo de estilo principal -->
+    <link rel="stylesheet" href="css/all.min.css"> <!-- Link para estilos adicionais -->
+    <script defer src="js/head.js"></script> <!-- Script carregado de forma assíncrona para o cabeçalho -->
+    <script src="js/index.js"></script> <!-- Script principal para funcionalidades -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Link para ícones do Bootstrap -->
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="#"><img src="imagensAgrinho/logo-c-nome.png" alt=" logo do site" width="128"></a> <!-- Logotipo do site -->
+            </div>
+
+            <button class="hamburger"></button> <!-- Botão para menu em dispositivos móveis -->
+            <ul class="nav-list">
+                <!-- Lista de navegação -->
+                <li><a href="#">Inicio</a></li>
+                <li><a href="estante-de-produtos.html">Produtos</a></li>
+                <li><a href="curso.html">Aprendizado</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="contact-us.html">Fale conosco</a></li>
+                <span></span> <!-- Espaço para separação, se necessário -->
+            </ul>
+            <div class="perfil">
+                <a href="login.html"><img src="imagensAgrinho/imagens pra icone/perfil_icone.png" alt="icone do perfil" width="56"></a> <!-- Ícone de perfil -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="heropage">
+            <article class="herop">
+                <article class="texto-hero">
+                    <!-- Texto principal da página inicial -->
+                    <p id="p1-hp">Bem-vindo á</p>
+                    <p id="p2-hp">Fresh Farm Market</p>
+                    <p id="p3-hp">Conecte-se <b>diretamente</b> com a <b>agricultura</b> local e descubra alimentos frescos e de qualidade</p>
+                    <div class="bts-principal">
+                        <button onclick=""><a href="estante-de-produtos.html">Ver produtos</a></button> <!-- Botão para visualizar produtos -->
+                    </div>
+                </article>
+                <section class="img-hp">
+                    <!-- Imagens de destaque na página inicial -->
+                    <img id="img-heropage1" src="imagensAgrinho/interessantes/celularMostrandoVegetais.jpeg" alt="imagem maior">
+                    <img id="img-heropage2" src="imagensAgrinho/imagens-complementares/pexels-greta-hoffman-9705816 (1).jpg" alt="imagem menor" width="30%">
+                    <img id="img-heropage3" src="imagensAgrinho/imagens-complementares/mulher loira com pimentão na mão.jpg" alt="imagem media">
+                </section>
+            </article>
+        </section>
+
+        <section class="amostra-serv">
+            <h1 id="tit">NOSSAS AÇÕES</h1> <!-- Título da seção -->
+            <div class="linha-hort"></div> <!-- Linha de separação para telas menores -->
+            <div class="img-gra">
+                <img src="imagensAgrinho/imagens-de-fundo/agricultor-fechando-negócio-com-chef-de-cozinha.jpeg" alt="imagen maior" width="201px"> <!-- Imagem da seção -->
+            </div>
+            <article class="texto-amos">
+                <!-- Lista de ações da empresa -->
+                <ol>
+                    <li><p id="tx1">Fortalecer o mercado da sua região, com o nosso modelo de venda</p></li>
+                    <li><p id="tx2">Fazer com que você compre com confiança e qualidade os seus produtos,<br> com nosso inovador sistema de avaliações</p></li>
+                    <li><p id="tx3">Mostrar a você empreenderdor como vender estrategicamente e em quantidade</p></li>
+                </ol>
+                <button id="btn-acoes"><a href="sobre-nos.html">ver mais ações</a></button> <!-- Botão para ver mais ações -->
+            </article>
+        </section>
+
+        <div class="cards-setores ">
+            <p id="titulo-cards">Alguns setores do site</p> <!-- Título dos setores -->
+            <!-- Cartões de setores -->
+            <div class="card it-um">
+                <div class="icon">
+                    <img src="imagensAgrinho/imagens-complementares/hortaliças.jpeg" alt="shop">
+                </div>
+                <h3 id="titulo-card">Estante de produtos</h3>
+                <span id="txt-card">clique aqui para achar o seu produto ideal </span>
+                <button id="btn-card"><a href="estante-de-produtos.html">produtos</a></button>
+            </div>
+            <div class="card it-do">
+                <div class="icon">
+                    <img src="imagensAgrinho/imagens pra icone/aprender.png" alt="e-comerce">
+                </div>
+                <h3 id="titulo-card">Cursos de aperfeiçoamento</h3>
+                <span id="txt-card">para você que quer aumentar suas vendas, nós disponibilizamos alguns cursos gratuitos </span>
+                <button id="btn-card"><a href="curso.html">aprender</a></button>
+            </div>
+            <div class="card it-tr">
+                <div class="icon">
+                    <img src="imagensAgrinho/imagens-complementares/jovemAgricultorC-pai-mae-olhando-pc.jpeg" alt="algumcoisa">
+                </div>
+                <h3 id="titulo-card">Venda seus produtos aqui!</h3>
+                <span id="txt-card">Para você agricultor, temos uma área voltada para anunciar seus produtos. </span>
+                <button id="btn-card"><a href="anunciar.html">anunciar</a></button>
+            </div>
+        </div>
+
+        <h1 id="titulo">Veja o que estão falando</h1> <!-- Título da seção de depoimentos -->
+        <section class="prova-social">
+            <div class="conteiner-prova">
+                <table class="tab-prova-sc">
+                    <!-- Tabela de depoimentos -->
+                    <tr>
+                        <td id="img-pf"><img src="imagensAgrinho/imagens-complementares/profile1.png" alt="prova1" width="100%"></td>
+                        <td><p id="coment-pf">"As avaliações são super úteis para garantir <br> a qualidade dos produtos."</p></td>
+                    </tr>
+                    <tr>
+                        <td id="img-pf"><img src="imagensAgrinho/imagens-complementares/prof2.png" alt="prova2" width="100%"></td>
+                        <td><p id="coment-pf">"Simples de usar e eficaz na conexão <br> entre agricultores e restaurantes."</p></td>
+                    </tr>
+                    <tr>
+                        <td id="img-pf"><img src="imagensAgrinho/imagens-complementares/prof3.png" alt="prova3" width="100%"></td>
+                        <td><p id="coment-pf">"Facilitou minha vida como proprietário de mercado, <br> oferecendo produtos confiáveis."</p></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="conteiner-prova">
+                <table class="tab-prova-sc">
+                    <!-- Tabela de depoimentos adicionais -->
+                    <tr>
+                        <td id="img-pf"><img src="imagensAgrinho/imagens-complementares/prof4.png" alt="prova1" width="100%"></td>
+                        <td><p id="coment-pf">"Ótima plataforma para encontrar produtos frescos <br> diretamente dos produtores locais"</p></td>
+                    </tr>
+                    <tr>
+                        <td id="img-pf"><img src="imagensAgrinho/imagens-complementares/prof5.png" alt="prova2" width="100%"></td>
+                        <td><p id="coment-pf">"Adorei os cursos gratuitos que ajudam <br> tanto agricultores quanto compradores."</p></td>
+                    </tr>
+                    <tr>
+                        <td id="img-pf"><img src="imagensAgrinho/imagens-complementares/profile1.png" alt="prova3" width="100%"></td>
+                        <td><p id="coment-pf">"Iniciativa incrível para promover a <br> agricultura local de forma sustentável."</p></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <div class="botao-prova">
+            <a href="#">Ver mais avaliações <i class="fa-solid fa-circle-right"></i></a> <!-- Botão para ver mais avaliações -->
+        </div>
+
+        <h2 id="h-cards">Algumas novidades</h2> <!-- Título da seção de novidades -->
+        <section class="cards-new">
+            <!-- Cartões de novidades -->
+            <article class="card-new" style="--cor:#ff3e7;">
+                <div class="caixa-img">
+                    <img src="imagensAgrinho/interessantes/Agricultura.jpg" alt="novidade" width="128px">
+                </div>
+                <div class="conteudo">
+                    <h2>Descoberta de cultivo</h2>
+                    <p>Agricultores do Paraná descobrem novo modo de plantar morangos</p>
+                    <a href="#">Ver mais</a>
+                </div>
+            </article>
+            <article class="card-new">
+                <div class="caixa-img">
+                    <img src="imagensAgrinho/imagens-complementares/aquaponia.png" alt="novidade" width="128px">
+                </div>
+                <div class="conteudo">
+                    <h2>+ alface</h2>
+                    <p>Pesquisa feita por mercados da região citam uma diferença no tamanho das hortaliças</p>
+                    <a href="#">Ver mais</a>
+                </div>
+            </article>
+            <article class="card-new">
+                <div class="caixa-img">
+                    <img src="imagensAgrinho/imagens-complementares/tuiuiu.jpg" alt="novidade" width="128px">
+                </div>
+                <div class="conteudo">
+                    <h2>Controle de pragas</h2>
+                    <p>Com o aumento das aves aquíferas, as plantações em meio aquifero têm produzido mais</p>
+                    <a href="#">Ver mais</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="chamar-curso">
+            <!-- Seção para chamar para cursos -->
+            <div class="conteudo-curso">
+                <p>Clique abaixo, veja os cursos e fique por dentro dessa inovação do mercado alimentício</p>
+                <button id="btn-set-curso"><a href="curso.html">aprender</a></button> <!-- Botão para acessar cursos -->
+            </div>
+        </section>
+
+        <div class="container-perguntas">
+            <h2>Veja aqui algumas perguntas frequentes</h2> <!-- Título da seção de perguntas frequentes -->
+        </div>
+        <section class="faq-question">
+            <!-- Perguntas frequentes -->
+            <div>
+                <p>Os cursos oferecidos na área de capacitação são gratuitos?</p>
+                <div class="show"> <!-- Contêiner para mostrar resposta -->
+                   <div class="abrir-resposta"><p id="a-da"><i class="bi bi-arrow-down"></i></p></div>
+                </div>
+                <p id="resposta">Sim, os cursos são disponibilizados pela empresa, com a intenção de ajudar você empreendedor a ampliar seus conhecimentos sobre empreendedorismo</p>
+            </div>
+
+            <div>
+                <p>Como posso encontrar produtos agrícolas específicos no site?</p>
+                <div class="show"> <!-- Contêiner para mostrar resposta -->
+                   <div class="abrir-resposta"><p id="a-da"><i class="bi bi-arrow-down"></i></p></div>
+                </div>
+                <p id="resposta">Clique no primeiro botão presente na área do herói. Utilize também filtros de categoria e localização para refinar sua pesquisa.</p>
+            </div>
+
+            <div>
+                <p>Como posso avaliar um fornecedor depois de realizar uma compra?</p>
+                <div class="show"> <!-- Contêiner para mostrar resposta -->
+                   <div class="abrir-resposta"><p id="a-da"><i class="bi bi-arrow-down"></i></p></div>
+                </div>
+                <p id="resposta">A avaliação do fornecedor é feita durante a compra, só é possível efetuar a compra após avaliar o fornecedor.</p>
+            </div>
+
+            <div>
+                <p>Existe algum custo para anunciar produtos no site?</p>
+                <div class="show"> <!-- Contêiner para mostrar resposta -->
+                   <div class="abrir-resposta"><p id="a-da"><i class="bi bi-arrow-down"></i></p></div>
+                </div>
+                <p id="resposta">Não, somente se o anunciante desejar fazer um anúncio pago, onde o site mostra o seu anúncio para mais pessoas, parecido com o tráfego pago.</p>
+            </div>
+
+            <div>
+                <p>Posso filtrar produtos por região geográfica no Fresh Farm Market?</p>
+                <div class="show"> <!-- Contêiner para mostrar resposta -->
+                   <div class="abrir-resposta"><p id="a-da"><i class="bi bi-arrow-down"></i></p></div>
+                </div>
+                <p id="resposta">Claro! Essa é uma das principais funcionalidades do site.</p>
+            </div>
+        </section>
+
+        <button id="pergunta"><a href="contact-us.html">Fazer pergunta</a></button> <!-- Botão para fazer uma pergunta ao suporte -->
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-logo">
+                    <div class="logo"><img src="imagensAgrinho/logo-c-nome.png" alt="fesh farm market" width="204px"></div> <!-- Logotipo do rodapé -->
+                    <p id="copy">Fresh Farm Market ©- Todos os direitos Reservados - 2024</p> <!-- Direitos autorais -->
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4> <!-- Título da coluna de ajuda -->
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="estante-de-produtos.html"><span>Produtos</span></a></li>
+                        <li><a href="curso.html"><span>Aprendizado</span></a></li>
+                        <li><a href="sobre-nos.html"><span>Sobre Nós</span></a></li>
+                        <li><a href="sobre-nos.html"><span>Serviços</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contate-nos</h4> <!-- Título da coluna de contato -->
+                    <ul>
+                        <li><a href="contact-us.html"><span>Chat-bot</span></a></li>
+                        <li><a href="contact-us.html"><span>fresfarm@gmail.com</span></a></li>
+                        <li><a href="contact-us.html"><span>(42) 3422-4509</span></a></li>
+                        <li><a href="contact-us.html"><span>+55 42 9999-9999</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4> <!-- Título da coluna de redes sociais -->
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a> <!-- Ícone do Facebook -->
+                        <a href="#"><i class="bi bi-whatsapp"></i></a> <!-- Ícone do WhatsApp -->
+                        <a href="#"><i class="bi bi-instagram"></i></a> <!-- Ícone do Instagram -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="swiper-bundle.min.js"></script> <!-- Script para funcionalidades do Swiper -->
+
+</body>
+</html>

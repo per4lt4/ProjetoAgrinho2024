@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link para o arquivo de estilo da página de login -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Link para o conjunto de ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <main>
+        <!-- Botão para voltar à página inicial -->
+        <button id="voltar"><a href="index.html"><i class="bi bi-arrow-left-circle-fill"></i></a></button>
+
+        <!-- Seção para a imagem de perfil do usuário -->
+        <section class="homem">
+            <img src="imagensAgrinho/imagens-de-fundo/img-login.png" alt="imagem de perfil de usuario">
+        </section>
+
+        <!-- Seção principal de login -->
+        <section class="login">
+            <!-- Título da página de login -->
+            <div class="titulo">
+                <p>Log in</p>
+            </div>
+
+            <!-- Subtítulo de boas-vindas -->
+            <div class="subtit">
+                <p>Bem vindo de volta!</p>
+            </div>
+
+            <!-- Área de entrada para o formulário de login -->
+            <div class="entrada">
+                <form>
+                    <fieldset>
+                        <!-- Campo para o email do usuário -->
+                        <label for="email">Seu email:</label><br>
+                        <input type="text" id="email" name="fname" value=""><br>
+                        <!-- Campo para a senha do usuário -->
+                        <label for="senha">Sua senha:</label><br>
+                        <input type="password" id="senha" name="lname" value=""><br><br>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- Botão de login -->
+            <div class="entrar">
+                <button><a href="perfil.html">entrar</a></button>
+            </div>
+
+            <!-- Seção alternativa com opções para redes sociais e criar uma conta -->
+            <div class="alternativo">
+                <div class="opcoes">
+                    <div class="icones">
+                        <!-- Ícones para redes sociais -->
+                        <p><i class="bi bi-facebook"></i></p>
+                        <p><i class="bi bi-instagram"></i></p>
+                    </div>
+                    <!-- Link para criar uma nova conta -->
+                    <p>Não possui conta? <a href="cadastro.html">criar uma conta</a></p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

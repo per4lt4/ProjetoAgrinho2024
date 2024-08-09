@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Anuncie na Fresh Farm Market</title>
+    <!-- Link para o arquivo CSS específico para a página de anúncio -->
+    <link rel="stylesheet" href="css/anunciar.css">
+    <!-- Link para o arquivo JavaScript (não é convencional linkar JS no <head> assim) -->
+    <link rel="stylesheet" href="js/anunciar.js">
+    <!-- Script JavaScript para funcionalidades da página -->
+    <script defer src="js/head.js"></script>
+</head>
+
+
+
+<body>
+
+    <!-- Cabeçalho da página com navegação -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Logo com link para a página de perfil -->
+            <div class="logo">
+                <a href="perfil.html"><img src="imagensAgrinho/logo-c-nome.png" alt="imagem da logo" width="128"></a>
+            </div>
+
+            <!-- Botão de menu hamburger (para dispositivos móveis) -->
+            <button class="hamburger"></button>
+
+            <!-- Lista de navegação -->
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="estante-de-produtos.html">Produtos</a></li>
+                <li><a href="curso.html">Aprendizado</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li><a href="contact-us.html">Fale conosco</a></li>
+                <span></span>
+            </ul>
+
+            <!-- Ícone do perfil com link para a página de perfil -->
+            <div class="perfil">
+                <a href="login.html"><img src="imagensAgrinho/imagens pra icone/perfil_icone.png" alt="icone do perfil" width="56"></a> <!-- Ícone de perfil -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+        <!-- Seção para visualizar e editar os detalhes do anúncio -->
+        <section class="vizualizar">
+            <div class="conteudo">
+
+                <!-- Container para upload da imagem principal -->
+                <div class="container-up">
+                    <div class="upload-container" id="uploadContainer">
+                        <input type="file" id="fileInput" class="hidden-input" accept="image/*" />
+                        <img id="uploadedImage" src="" alt="Imagem Carregada" style="display: none;" />
+                        <p id="uploadText">Clique aqui para selecionar uma imagem</p>
+                    </div>
+                </div>
+
+                <!-- Texto descritivo para o produto -->
+                <div class="texto-descr">
+                    <h1>Título aqui</h1>
+                    <p>Descrição aqui</p>
+                </div>
+
+                <!-- Valor atualizado do produto -->
+                <div class="val-at">
+                    <p>Valor: R$<span id="valorAtualizado"></span></p>
+                </div>
+
+            </div>
+
+            <!-- Script para funcionalidades do upload de imagem -->
+            <script src="js/anunciar.js"></script>
+
+        </section>
+
+        <!-- Seção para informações detalhadas do produto -->
+        <section class="informacoes">
+            <h1 id="titulo">Faça upload das imagens do seu produto:</h1>
+
+            <div class="imagens-up">
+                <!-- Containers para upload de até 3 imagens -->
+                <div class="upload-container" data-container-id="1">
+                    <img id="uploadedImage1" src="" alt="Sua Imagem" style="display: none;" />
+                    <input type="file" id="fileInput1" class="hidden-input" accept="image/*" />
+                </div>
+
+                <div class="upload-container" data-container-id="2">
+                    <img id="uploadedImage2" src="" alt="Sua Imagem" style="display: none;" />
+                    <input type="file" id="fileInput2" class="hidden-input" accept="image/*" />
+                </div>
+
+                <div class="upload-container" data-container-id="3">
+                    <img id="uploadedImage3" src="" alt="Sua Imagem" style="display: none;" />
+                    <input type="file" id="fileInput3" class="hidden-input" accept="image/*" />
+                </div>
+            </div>
+
+            <!-- Campos de descrição do produto -->
+            <div class="descricao-prod">
+                <div class="item">
+                    <p>Título do anúncio</p>
+                    <textarea id="texto" name="mensagem" rows="4" style="resize: none;"></textarea>
+                </div>
+
+                <div class="item">
+                    <p>Quantia/peso</p>
+                    <textarea id="texto" name="mensagem" rows="4" style="resize: none;"></textarea>
+                </div>
+
+                <div class="item">
+                    <p>Texto atrativo</p>
+                    <textarea id="texto" name="mensagem" rows="4" style="resize: none;"></textarea>
+                </div>
+            </div>
+
+            <!-- Campo para descrição detalhada do produto -->
+            <div class="descricao-texto">
+                <p>Descreva aqui seu produto</p>
+                <textarea id="texto" name="mensagem" rows="10" cols="30" style="resize: none;"></textarea>
+            </div>
+
+            <!-- Dropdown para escolher a categoria do produto -->
+            <div class="dropdown">
+                <h4>Escolha a categoria de seu produto</h4>
+                <button onclick="toggleDropdown()" id="dropdownButton">Categoria V</button>
+                <div id="dropdownContent" class="dropdown-content">
+                    <a href="#" onclick="selectOption('vegetais')">Vegetais</a>
+                    <a href="#" onclick="selectOption('frutas')">Frutas</a>
+                    <a href="#" onclick="selectOption('carnes')">Carnes</a>
+                    <a href="#" onclick="selectOption('conservas')">Conservas</a>
+                    <a href="#" onclick="selectOption('artesanais')">Artesanais</a>
+                    <a href="#" onclick="selectOption('outros')">Outros</a>
+                </div>
+            </div>
+
+            <!-- Opções adicionais como frete grátis, entrega e contrato -->
+            <div class="opcoes-onoff">
+                <div class="container">
+                    <p id="opt-onoff">Frete grátis</p>
+                    <input type="checkbox" id="check1">
+                    <label for="check1" class="button"></label>
+                </div>
+
+                <div class="container">
+                    <p id="opt-onoff">Entrega</p>
+                    <input type="checkbox" id="check3">
+                    <label for="check3" class="button"></label>
+                </div>
+
+                <div class="container">
+                    <p id="opt-onoff">Contrato</p>
+                    <input type="checkbox" id="check5">
+                    <label for="check5" class="button"></label>
+                </div>
+            </div>
+
+            <!-- Seção para definir o preço e finalizar o anúncio -->
+            <div class="finalizar">
+                <div>
+                    <label id="preco" for="inputValor">Escolha o valor do produto<span class="prefix">R$:</span></label>
+                    <input type="number" id="inputValor" oninput="atualizarValor()">
+                </div>
+
+                <div class="btn-fim">
+                    <button><a href="anunciado.html">Anunciar</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <!-- Logo e direitos autorais -->
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="imagensAgrinho/logo-c-nome.png" alt="Fresh Farm Market" width="204px">
+                    </div>
+                    <p id="copy">Fresh Farm Market ©- Todos os direitos Reservados - 2024</p>
+                </div>
+                <!-- Links de ajuda -->
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="estante-de-produtos.html"><span>Produtos</span></a></li>
+                        <li><a href="contact-us.html"><span>Aprendizado</span></a></li>
+                        <li><a href="sobre-nos.html"><span>Sobre Nós</span></a></li>
+                        <li><a href="sobre-nos.html"><span>Serviços</span></a></li>
+                    </ul>
+                </div>
+                <!-- Informações de contato -->
+                <div class="footer-col">
+                    <h4>Contate-nos</h4>
+                    <ul>
+                        <li><a href="contact-us.html"><span>Chat-bot</span></a></li>
+                        <li><a href="contact-us.html"><span>fresfarm@gmail.com</span></a></li>
+                        <li><a href="contact-us.html"><span>(42) 3422-4509</span></a></li>
+                        <li><a href="contact-us.html"><span>+55 42 9999-9999</span></a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociais -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
