@@ -780,7 +780,7 @@ input {
 @media screen and (min-width:768px) {
 
 li.login-nav{
-z-index: -20;
+display:none;
 }
     
     .informacoes {
